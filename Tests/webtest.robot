@@ -9,4 +9,4 @@ User can access website
     open browser                about:blank         chrome
     go to                       https://www.willys.se/
     wait until page contains    Handla billig mat online
-    close browser
+    close browser  # stänger webläsaren
