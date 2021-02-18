@@ -1,40 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210218 13:22:02.465" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210218 13:36:14.599" rpa="false">
 <suite id="s1" name="Tests" source="C:\Users\hovde\PycharmProjects\testobject\Tests">
 <suite id="s1-s1" name="Webtest" source="C:\Users\hovde\PycharmProjects\testobject\Tests\webtest.robot">
-<test id="s1-s1-t1" name="User can access website and search for a product">
+<test id="s1-s1-t1" name="User can access website">
+<kw name="Begin Web Test" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210218 13:22:02.742" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210218 13:22:02.741" endtime="20210218 13:22:03.937"></status>
+<msg timestamp="20210218 13:36:14.875" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210218 13:36:14.875" endtime="20210218 13:36:16.048"></status>
 </kw>
+<status status="PASS" starttime="20210218 13:36:14.874" endtime="20210218 13:36:16.049"></status>
+</kw>
+<kw name="Go to Web Page">
+<kw name="Load Page">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>https://www.willys.se/</arg>
 </arguments>
-<msg timestamp="20210218 13:22:03.937" level="INFO">Opening url 'https://www.willys.se/'</msg>
-<status status="PASS" starttime="20210218 13:22:03.937" endtime="20210218 13:22:06.693"></status>
+<msg timestamp="20210218 13:36:16.050" level="INFO">Opening url 'https://www.willys.se/'</msg>
+<status status="PASS" starttime="20210218 13:36:16.049" endtime="20210218 13:36:18.176"></status>
 </kw>
+<status status="PASS" starttime="20210218 13:36:16.049" endtime="20210218 13:36:18.176"></status>
+</kw>
+<kw name="Verify Page Loaded">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Handla billig mat online</arg>
 </arguments>
-<status status="PASS" starttime="20210218 13:22:06.694" endtime="20210218 13:22:06.791"></status>
+<status status="PASS" starttime="20210218 13:36:18.177" endtime="20210218 13:36:18.306"></status>
 </kw>
+<status status="PASS" starttime="20210218 13:36:18.176" endtime="20210218 13:36:18.306"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:16.049" endtime="20210218 13:36:18.306"></status>
+</kw>
+<kw name="End Web Test" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210218 13:36:18.307" endtime="20210218 13:36:20.435"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:18.306" endtime="20210218 13:36:20.435"></status>
+</kw>
+<doc>This is some basic info about the whole test suite</doc>
+<tags>
+<tag>Test 1</tag>
+</tags>
+<status status="PASS" starttime="20210218 13:36:14.873" endtime="20210218 13:36:20.436" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="User can search for a product">
+<kw name="Begin Web Test" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210218 13:36:20.438" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210218 13:36:20.438" endtime="20210218 13:36:21.607"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:20.438" endtime="20210218 13:36:21.607"></status>
+</kw>
+<kw name="Go to Web Page">
+<kw name="Load Page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.willys.se/</arg>
+</arguments>
+<msg timestamp="20210218 13:36:21.608" level="INFO">Opening url 'https://www.willys.se/'</msg>
+<status status="PASS" starttime="20210218 13:36:21.608" endtime="20210218 13:36:24.269"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:21.608" endtime="20210218 13:36:24.269"></status>
+</kw>
+<kw name="Verify Page Loaded">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Handla billig mat online</arg>
+</arguments>
+<status status="PASS" starttime="20210218 13:36:24.270" endtime="20210218 13:36:24.310"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:24.269" endtime="20210218 13:36:24.310"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:21.608" endtime="20210218 13:36:24.310"></status>
+</kw>
+<kw name="Search for Product">
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id:selenium--search-items-input</arg>
 <arg>kiwi</arg>
 </arguments>
-<msg timestamp="20210218 13:22:06.794" level="INFO">Typing text 'kiwi' into text field 'id:selenium--search-items-input'.</msg>
-<status status="PASS" starttime="20210218 13:22:06.794" endtime="20210218 13:22:06.976"></status>
+<msg timestamp="20210218 13:36:24.311" level="INFO">Typing text 'kiwi' into text field 'id:selenium--search-items-input'.</msg>
+<status status="PASS" starttime="20210218 13:36:24.311" endtime="20210218 13:36:24.542"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -42,44 +105,50 @@
 <arg>xpath://*[@id="selenium--search-items-input"]</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20210218 13:22:06.977" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="selenium--search-items-input"] element.</msg>
-<msg timestamp="20210218 13:22:07.311" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20210218 13:22:07.311" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20210218 13:22:06.976" endtime="20210218 13:22:07.351"></status>
+<msg timestamp="20210218 13:36:24.542" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="selenium--search-items-input"] element.</msg>
+<msg timestamp="20210218 13:36:24.905" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20210218 13:36:24.906" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210218 13:36:24.542" endtime="20210218 13:36:24.940"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Sökord: kiwi</arg>
 </arguments>
-<status status="PASS" starttime="20210218 13:22:07.351" endtime="20210218 13:22:09.705"></status>
+<status status="PASS" starttime="20210218 13:36:24.940" endtime="20210218 13:36:27.814"></status>
 </kw>
+<status status="PASS" starttime="20210218 13:36:24.310" endtime="20210218 13:36:27.815"></status>
+</kw>
+<kw name="End Web Test" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210218 13:22:09.705" endtime="20210218 13:22:11.897"></status>
+<status status="PASS" starttime="20210218 13:36:27.815" endtime="20210218 13:36:29.975"></status>
+</kw>
+<status status="PASS" starttime="20210218 13:36:27.815" endtime="20210218 13:36:29.975"></status>
 </kw>
 <doc>This is some basic info about the whole test suite</doc>
 <tags>
-<tag>Test 1</tag>
+<tag>Test 2</tag>
 </tags>
-<status status="PASS" starttime="20210218 13:22:02.740" endtime="20210218 13:22:11.897" critical="yes"></status>
+<status status="PASS" starttime="20210218 13:36:20.437" endtime="20210218 13:36:29.975" critical="yes"></status>
 </test>
 <doc>This is some basic info about the whole test suite</doc>
-<status status="PASS" starttime="20210218 13:22:02.499" endtime="20210218 13:22:11.899"></status>
+<status status="PASS" starttime="20210218 13:36:14.671" endtime="20210218 13:36:29.977"></status>
 </suite>
-<status status="PASS" starttime="20210218 13:22:02.468" endtime="20210218 13:22:11.901"></status>
+<status status="PASS" starttime="20210218 13:36:14.602" endtime="20210218 13:36:29.979"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0">Test 1</stat>
+<stat pass="1" fail="0">Test 2</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Webtest">Tests.Webtest</stat>
+<stat pass="2" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" id="s1-s1" name="Webtest">Tests.Webtest</stat>
 </suite>
 </statistics>
 <errors>
