@@ -1,16 +1,13 @@
 
-name: CI
-on:
-  workflow_dispatch:
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: testspace-com/setup-testspace@v1
-        with:
-          domain: ${{MattiasITHS}}
-      - name: Push result to Testspace server
-        run: |
-          testspace results.xml 
-        if: always()
+Run hello world test:
+  image: marketsquare/robotframework-browser
+  stage: test
+  script:
+    - robot -d Result Tests
+  artifacts:
+    when: always
+    expire_in: 1 week
+    paths:
+      - logs
+    reports:
+      junit: logs/xunit.xml
