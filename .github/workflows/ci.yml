@@ -11,6 +11,6 @@ jobs:
         with:
           domain: ${{MattiasITHS}}
       - name: Push result to Testspace server
-        run: robot -d Results Tests
+        run: |
           testspace results.xml 
         if: always()
