@@ -1,0 +1,8 @@
+steps:
+  - uses: testspace-com/setup-testspace@v1
+    with:
+      domain: ${{MattiasITHS}}
+
+  ..
+  - name: Publish Results to Testspace
+    run: testspace "path/to/*.xml"
